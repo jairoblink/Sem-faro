@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Semáforo</title>
+</head>
+<body>
+  <div class="container">
+    <div class="semaforo">
+      <div id="farolVermelho" class="luz "></div>
+      <div id="farolAmarelo" class="luz"></div>
+      <div id="farolVerde" class="luz"></div>
+      <div class="botoes">
+        <button id="btnVermelho" class="botao cor-vermelha">Ligar</button>
+        <button id="btnAmarelo" class="botao cor-amarela">Ligar</button>
+        <button id="btnVerde" class="botao cor-verde">Ligar</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    var farolVermelho = document.getElementById('farolVermelho')
+    var farolAmarelo = document.getElementById('farolAmarelo')
+    var farolVerde = document.getElementById('farolVerde')
+
+    var btnVermelho = document.getElementById('btnVermelho')
+    var btnAmarelo = document.getElementById('btnAmarelo')
+    var btnVerde = document.getElementById('btnVerde')
+
+    btnVermelho.addEventListener("click", function ligarFarol() {
+      farolVermelho.classList.toggle("cor-vermelha")
+      farolAmarelo.classList.remove("cor-amarela")
+      farolVerde.classList.remove("cor-verde")
+    })
+
+    btnAmarelo.addEventListener("click", function ligarFarol() {
+      farolVermelho.classList.remove("cor-vermelha")
+      farolAmarelo.classList.toggle("cor-amarela")
+      farolVerde.classList.remove("cor-verde")
+    })
+
+    btnVerde.addEventListener("click", function ligarFarol() {
+      farolVermelho.classList.remove("cor-vermelha")
+      farolAmarelo.classList.remove("cor-amarela")
+      farolVerde.classList.toggle("cor-verde")
+    })
+
+    
+
+  </script>
+</body>
+</html>
